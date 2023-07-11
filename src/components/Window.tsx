@@ -52,13 +52,13 @@ function Window() {
             <div className="group">
               <button type="button" className="ribbon-button">
                 <span className="icon">
-                  <img src="images/share.svg" />
+                <span className="mif-share fg-cyan"></span>
                 </span>
                 <span className="caption">Share</span>
               </button>
               <button className="ribbon-button">
                 <span className="icon">
-                  <img src="images/email.svg"></img>
+                <span className="mif-mail fg-cyan"></span>
                 </span>
                 <span className="caption">Email</span>
               </button>
