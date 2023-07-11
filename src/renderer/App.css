@@ -1,0 +1,55 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+/* prevent select and drag on window elements */
+* :not(.tabs-holder) {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+}
+
+/* window drag handler */
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #dadbdc;
+}
+
+.titlebar .windowTitle {
+  align-self: flex-end;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  padding-right: 140px;
+  flex: 1;
+  text-align: center;
+  /* border-bottom: 1px solid #dadbdc; */
+}
+
+body {
+  min-width: 600px;
+}
+/* Normal Window */
+@media screen and (max-width: 800px) {
+  .tabs-holder {
+    display: none !important;
+  }
+  .titlebar .windowTitle {
+    align-self: none;
+    flex: none;
+  }
+  .titlebar {
+    justify-content: left;
+  }
+
+}
+/* Small Window */
+@media screen and (min-width: 800px) {
+  .menu-holder {
+    display: none !important;
+  }
+}
